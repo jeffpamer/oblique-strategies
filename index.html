@@ -61,11 +61,11 @@
       var addStylesNode = document.getElementById("deferred-styles");
       var replacement = document.createElement("div");
       replacement.innerHTML = addStylesNode.textContent;
-      document.body.appendChild(replacement)
+      document.body.appendChild(replacement);
       addStylesNode.parentElement.removeChild(addStylesNode);
-      window.requestAnimationFrame(function() {
+      window.setTimeout(function() {
         document.body.className = "fonts-loaded";
-      });
+      }, 50);
     };
     var raf = requestAnimationFrame || mozRequestAnimationFrame ||
         webkitRequestAnimationFrame || msRequestAnimationFrame;
