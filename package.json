@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir build; touch build/index.html; ./node_modules/.bin/htmlminify -o build/index.html index.html; cp -r assets build/assets; cp favicon.ico build/favicon.ico"
+    "build": "mkdir build; touch build/index.html; cp -r assets build/assets; cp favicon.ico build/favicon.ico"
   },
   "repository": {
     "type": "git",
