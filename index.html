@@ -63,7 +63,9 @@
       replacement.innerHTML = addStylesNode.textContent;
       document.body.appendChild(replacement)
       addStylesNode.parentElement.removeChild(addStylesNode);
-      document.body.className = "fonts-loaded";
+      window.requestAnimationFrame(function() {
+        document.body.className = "fonts-loaded";
+      });
     };
     var raf = requestAnimationFrame || mozRequestAnimationFrame ||
         webkitRequestAnimationFrame || msRequestAnimationFrame;
